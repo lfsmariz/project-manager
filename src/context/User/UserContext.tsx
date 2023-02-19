@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { User, UserDefault } from "../../@types/User";
+import { User, UserDefault } from "../../domain/User";
 
 type propUserContext = {
   user: User;

@@ -1,12 +1,13 @@
+import { RouterProvider } from "react-router-dom";
 import "./App.css";
 import { ContextProvider } from "./context/Context";
-import Home from "./pages/Home/Home";
+import { router } from "./routes/Routes";
 
 function App() {
   return (
     <ContextProvider>
       <div className="App">
-        <Home />
+        <RouterProvider router={router} />
       </div>
     </ContextProvider>
   );
