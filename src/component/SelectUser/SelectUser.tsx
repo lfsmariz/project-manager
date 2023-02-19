@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
-import { UserContext } from "../context/User/UserContext";
-import { UserMode } from "../@types/User";
+import { UserContext } from "../../context/User/UserContext";
+import { UserMode } from "../../domain/User";
 
 /* eslint-disable jsx-a11y/anchor-is-valid */
 export const SelectUser = () => {
@@ -36,19 +36,19 @@ export const SelectUser = () => {
 
   const selectedUser = () => {
     return (
-      <div className="buttons">
+      <div className="buttons is-centered">
         <div className="button is-primary">
           <strong>{user.getActualUser()}</strong>
         </div>
-        <a
+        <div
           className="button is-light"
           onClick={() => {
             setUser(user.logout());
             setSelect(false);
           }}
         >
-          Logout
-        </a>
+          <strong>Logout</strong>
+        </div>
       </div>
     );
   };

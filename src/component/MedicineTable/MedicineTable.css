@@ -1,0 +1,9 @@
+.td-content {
+  text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+  .td-content {
+    font-size: small;
+  }
+}

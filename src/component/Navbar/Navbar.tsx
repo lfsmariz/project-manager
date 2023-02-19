@@ -1,7 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable jsx-a11y/alt-text */
 import { useState } from "react";
-import { SelectUser } from "./SelectUser";
+import "./Navbar.css";
+import { Link } from "react-router-dom";
+import { SelectUser } from "../SelectUser/SelectUser";
 
 export const Navbar = () => {
   const classActive = "is-active";
@@ -14,6 +16,9 @@ export const Navbar = () => {
       aria-label="main navigation"
     >
       <div className="navbar-brand">
+        <div className="navbar-item logo">
+          <Link to={"/"}>TATU SYSTEM</Link>
+        </div>
         <div
           role="button"
           className={`navbar-burger ${toogleMenu ? classActive : ""}`}
@@ -32,15 +37,18 @@ export const Navbar = () => {
         className={`navbar-menu ${toogleMenu ? classActive : ""}`}
       >
         <div className="navbar-start">
-          <a className="navbar-item">TATU System</a>
-          <a className="navbar-item">Home</a>
+          <div className="navbar-item">
+            <Link to={"/"}>HOME</Link>
+          </div>
 
           <div className="navbar-item has-dropdown is-hoverable">
-            <a className="navbar-link is-arrowless">Sistemas </a>
+            <div className="navbar-link is-arrowless">Sistemas </div>
             <div className="navbar-dropdown border-top">
-              <a className="navbar-item">Remédios Doguinho</a>
-              <a className="navbar-item">Lista de Compras</a>
-              <a className="navbar-item">Todo List</a>
+              <div className="navbar-item">
+                <Link to={"/vaccine"}>Remédios Doguinho</Link>
+              </div>
+              <div className="navbar-item">Lista de Compras</div>
+              <div className="navbar-item">Todo List</div>
             </div>
           </div>
         </div>
